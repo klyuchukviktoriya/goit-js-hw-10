@@ -1,25 +1,234 @@
-/**
+/*
   |============================
   | include css partials with
   | default @import url()
   |============================
 */
+
 @import url('./reset.css');
-@import url('./vite-promo.css');
-@import url('./header.css');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:wght@300;400;700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=block');
 
-:root {
-  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+body {
+  font-family: 'Montserrat', sans-serif;
   font-size: 16px;
-  line-height: 24px;
   font-weight: 400;
+  font-style: normal;
+}
 
-  color: #242424;
-  background-color: rgba(255, 255, 255, 0.87);
+* {
+  box-sizing: border-box;
+}
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
+body {
+  background-color: rgb(236, 208, 84);
+}
+
+.nav-link {
+  margin: 50px auto 50px;
+  display: block;
+  width: 180px;
+  background-color: #fff;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 40px;
+}
+
+/*! Task-1 */
+
+.task-1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  background-color: #fff;
+  width: 432px;
+  padding: 36px;
+  border-radius: 8px;
+}
+
+.window {
+  margin: 0 auto;
+  margin-bottom: 32px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+#datetime-picker {
+  width: 272px;
+  height: 40px;
+  border-radius: 4px;
+  border: 1px solid #808080;
+  padding: 8px 16px;
+  outline: none;
+  color: #2e2f42;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.64px;
+}
+
+#datetime-picker:hover {
+  border-color: #000;
+}
+
+#datetime-picker:active {
+  color: #000;
+  border-color: #4e75ff;
+}
+#datetime-picker:disabled {
+  color: #808080;
+  border-color: #808080;
+  background-color: #fafafa;
+}
+
+[data-start] {
+  color: #fff;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0.64px;
+  border-radius: 8px;
+  background: #4e75ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  width: 75px;
+  height: 40px;
+}
+
+[data-start]:hover {
+  background-color: #6c8cff;
+}
+
+[data-start]:disabled {
+  background-color: #cfcfcf;
+  color: #989898;
+}
+
+.timer {
+  background-color: #fff;
+  display: flex;
+  gap: 24px;
+  width: 353px;
+  align-items: center;
+  justify-content: center;
+}
+
+.field {
+  text-align: center;
+}
+
+.value {
+  color: #2e2f42;
+  font-size: 40px;
+  line-height: 48px;
+  letter-spacing: 1.6px;
+}
+
+.label {
+  color: #2e2f42;
+  line-height: 24px;
+  text-transform: uppercase;
+}
+
+/*! Task-2 */
+.form {
+  background-color: #ffffff;
+  width: 440px;
+  color: #2e2f42;
+  line-height: 24px; /* 150% */
+  letter-spacing: 0.64px;
+  margin: 0 auto;
+  padding: 40px;
+  border-radius: 16px;
+}
+
+.form > label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: #2e2f42;
+  line-height: 24px;
+  width: 360px;
+  margin: 0 auto;
+}
+
+.form > label > input {
+  width: 360px;
+  height: 40px;
+  border-radius: 4px;
+  border: 1px solid #808080;
+  outline: none;
+  margin-bottom: 16px;
+  padding: 8px 16px;
+  color: #2e2f42;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 150% */
+  letter-spacing: 0.64px;
+}
+
+.form > label > input:hover {
+  border-color: #000000;
+}
+
+.form > label > input:active {
+  border-color: #4e75ff;
+}
+
+.form > fieldset {
+  border-radius: 4px;
+  border: 1px solid #808080;
+  width: 360px;
+  margin: 0 auto 24px;
+}
+
+.form > fieldset:hover {
+  border-color: #000;
+}
+
+.form > fieldset:active {
+  border-color: #000;
+}
+
+.form > fieldset > legend {
+}
+
+.form > fieldset > label > input {
+  margin: 24px 0 8px 48px;
+}
+
+.form > button {
+  display: flex;
+  width: 360px;
+  padding: 8px 16px;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px; /* 150% */
+  letter-spacing: 0.64px;
+  border-radius: 8px;
+  background: #4e75ff;
+  border: none;
+}
+
+.form > button:hover {
+  background-color: #6c8cff;
+}
+
+input[type='radio'] {
+  transform: scale(1.5);
 }
